@@ -1,0 +1,211 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{amsmath}
+
+\title{Homework 3}
+\author{Martin Mueller}
+\date{Due: February $22^{nd}$, 2019}
+
+\begin{document}
+\maketitle
+
+\textbf{6. A small business has offices in four locations (A, B, C and D). The business has 8 employees in location A, 7 employees in location B, 6 employees in location C and 4 employees in location D.}
+
+\qquad \textbf{a) The business decides to lay off 8 employees. How many ways can this be done?}
+\begin{center}
+	There are a total of 25 (8+7+6+4) employees. In this case, we just need to choose a distinct group of 8 of them to fire, and the order in which they are fired does not matter. This means we must find the amount of \textit{combinations} of employees to fire:
+\end{center}
+$${{}_{25}C_{8}} = \frac{25!}{(25-8)!8!} = \boxed{1,081,575}$$
+
+\qquad \textbf{b) The business decides to lay off 3 employees from location A, 2 employees from location B, 2 employees from location C and 1 employee from location D. How many ways can this be done?}
+\begin{center}
+	This problem is similar to the first in the fact that we must use combinations again. However, it differs because now we are removing combinations of people from different groups, which means we have to take multiple combinations into account. We do this by multiplying the combinations together. Each combination is found by taking the number of people at each different location and selecting the given amount from each group:
+\end{center}
+\begin{align*}
+	{{}_{8}C_{3}} \cdot {{}_{7}C_{2}} \cdot {{}_{6}C_{2}} \cdot {{}_{4}C_{1}} &= \frac{8!}{(8-3)!3!} \cdot \frac{7!}{(7-2)!2!} \cdot \frac{6!}{(6-2)!2!} \cdot \frac{4!}{(4-1)!1!} \\
+		&= 56\cdot21\cdot15\cdot4 \\
+		&= \boxed{70,560}
+\end{align*}
+
+\textbf{7. A poker hand consists of five cards chosen at random from a standard deck of cards. A standard deck of 52 cards has four 13-card suits: diamonds, hearts, clubs, and spades. The diamonds and hearts are red, and the clubs and spades are black. Each 13-card suit contains cards numbered from 2 to 10, a jack, a queen, a king and an ace. The jack, queen, and king are called face cards. Find the probability that the poker hand...}
+
+\qquad \textbf{a) ...consists of all spades.}
+\begin{center}
+	Assuming that each card has the same probability of being chosen, we can simply figure out the probability of a spade being dealt from the deck 5 times in a row, keeping in mind that both the pool of spades to chose from and the overall size of the deck shrinks every time it is dealt from. The probabilities must be multiplied together in order to combine them:
+\end{center}
+\begin{align*}
+	P(\text{getting five spades}) &= \frac{13}{52} \cdot \frac{12}{51} \cdot \frac{11}{50} \cdot \frac{10}{49} \cdot \frac{9}{48} \\
+	&= \frac{154,440}{311,875,200} \\
+	&= \boxed{0.0004951}
+\end{align*}
+
+\qquad \textbf{b) ...consists of cards all from the same suit.}
+\begin{center}
+	There is only one real difference between this part and part a. In part a, we were restricted to picking from a specific suit for the first choice. In this case, the first card can be anything. It is only after the first card is dealt that we are limited in our selection:
+\end{center}
+\begin{align*}
+	P(\text{five of the same suit}) &= \frac{52}{52} \cdot \frac{12}{51} \cdot \frac{11}{50} \cdot \frac{10}{49} \cdot \frac{9}{48} \\
+	&= \frac{617,760}{311,875,200} \\
+	&= \boxed{0.001981}
+\end{align*}
+
+\pagebreak
+
+\qquad \textbf{c) ...contains all four kings.}
+\begin{center}
+	This is similar to part a, because we are dealt an ever shrinking group of cards from an ever shrinking deck. The only difference here is that we only need 4 specific cards out of five dealt. That means that at any point, in the dealing, we are allowed to get a random card. For this reason, it's much easier to visualize this problem in terms of combinations:
+\end{center}
+\begin{align*}
+	P(\text{4 kings and another card}) &= \frac{{}_{4}C_{4} \cdot {{}_{48}C_{1}}}{{}_{52}C_{5}} \\
+	&= \boxed{0.00001847}
+\end{align*}
+
+\qquad \textbf{d) ...contains all face cards.}
+\begin{center}
+	There are 3 types of face cards: jacks, queens, and kings. There are 4 of each of these face cards, which leaves a total of 12 face cards in a standard 52 card deck. This reduces to the same basic problem as part a, except the starting  size of the pool is 12 instead of 13:
+\end{center}
+\begin{align*}
+	P(\text{getting five face cards}) &= \frac{12}{52} \cdot \frac{11}{51} \cdot \frac{10}{50} \cdot \frac{9}{49} \cdot \frac{8}{48} \\
+	&= \frac{95,040}{311,875,200} \\
+	&= \boxed{0.0003047}
+\end{align*}
+
+\qquad \textbf{e) ...contains only 3 face cards.}
+\begin{center}
+	This problem starts out very much the same as part d, but for the last two outcomes, the numbers in the numerator need to be the numbers of non face cards left in the deck. We have to realize that the random cards can be dealt anywhere in the hand, so using combinations is much easier here:
+\end{center}
+\begin{align*}
+	P(\text{getting five face cards}) &= \frac{{}_{12}C_{3} \cdot {}_{40}C_{2}}{{}_{52}C_{5}} \\
+	&= \boxed{0.06603}
+\end{align*}
+
+\pagebreak
+
+\textbf{9. 10 males and 8 females apply for 6 teaching vacancies at a university. If the selections to fill the vacancies are done at random, what is the probability of selecting...}
+
+\qquad \textbf{a) ...1 male and 5 females?}
+\begin{center}
+	10 male applicants and 8 female applicants give us 18 for the total number of applicants. Out of 10 males, we must pick 1, and out of 8 females, we must pick 4 for a total of 6 applicants:
+\end{center}
+\begin{align*}
+	P(\text{1 male and 5 females}) &= \frac{{}_{10}C_{1} \cdot {}_{8}C_{5}}{{}_{18}C_{6}} \\
+	&= \boxed{0.03017}
+\end{align*}
+
+\qquad \textbf{b) ...3 males and 3 females?}
+\begin{center}
+	This employs the same concepts as above, we just have to change out some of the numbers:
+\end{center}
+\begin{align*}
+	P(\text{3 males and 3 females}) &= \frac{{}_{10}C_{3} \cdot {}_{8}C_{3}}{{}_{18}C_{6}} \\
+	&= \boxed{0.3620}
+\end{align*}
+
+\qquad \textbf{c) ...4 males?}
+\begin{center}
+	Here, we have to consider 3 different cases: the case that all 6 are males, the case that 1 female and 5 males were selected, and the case that 2 females and 4 males were selected. We can then add the probabilities to get the final answer since they are mutually exclusive:
+\end{center}
+\begin{align*}
+	P(\text{4 males}) &= \frac{{}_{10}C_{6} \cdot {}_{8}C_{0}}{{}_{18}C_{6}} + \frac{{}_{10}C_{5} \cdot {}_{8}C_{1}}{{}_{18}C_{6}} + \frac{{}_{10}C_{4} \cdot {}_{8}C_{2}}{{}_{18}C_{6}} \\
+	&= \frac{70}{221} + \frac{24}{221} + \frac{5}{442} \\
+	&= \boxed{0.4367}
+\end{align*}
+
+\pagebreak
+
+\qquad \textbf{d) ...all males?}
+\begin{center}
+	This problem uses the equation for the first case considered in the problem above:
+\end{center}
+\begin{align*}
+	P(\text{6 males}) &= \frac{{}_{10}C_{6} \cdot {}_{8}C_{0}}{{}_{18}C_{6}}\\
+	&= \frac{70}{221} \\
+	&= \boxed{0.01131}
+\end{align*}
+
+\textbf{10. A shipment of 18 inexpensive digital watches, including 6 that are defective, is sent to a department store. The receiving department selects 6 at random for testing and rejects the whole shipment if 1 or more in the sample are found defective. What is the probability that the shipment will be rejected?}
+\begin{center}
+	For this particular problem, it is much easier to find the probability of the compliment of of this event, then using that to find the probability of the store finding any defective watches. Since 6 out of 18 are defective, that means that 12 are not. Now we need to find the probability that they find no defective watches:
+\end{center}
+\begin{align*}
+	P(\text{finding no defective watches}) &= \frac{{}_{12}C_{6}}{{}_{18}C_{6}} \\
+	&= 0.04977
+\end{align*}
+\begin{align*}
+	P(\text{finding at least 1 defective watch}) &= 1 - 0.04977 \\
+	&= \boxed{0.95023}
+\end{align*}
+
+\textbf{15. By testing a large number of individuals, it has been determined that 82\% of the population have normal hearts, 11\% have some minor heart problems, and 7\% have severe heart problems.  Ninety-five percent of the persons with normal hearts, 30\% of those with minor problems, and 5\% of those with sever problems will pass a cardiogram test.}
+
+\pagebreak
+
+\textbf{a) Find the probability that a person will pass a cardiogram test.}
+\begin{center}
+	Let's define event A to be that a person has a normal heart, B to mean that a person has minor heart problems, C to mean that a person has severe heart problems, and D to mean that they pass a cardiogram test. Now we can rewrite the problem symbolically and solve:
+\end{center}
+\begin{align*}
+	P(D) &= P(A \cap D) \cup P(B \cap D) \cup P(C \cap D) \\
+	&= (0.82 \cdot 0.95) + (0.11 \cdot 0.30) + (0.07 \cdot 0.05) \\
+	&= \boxed{0.8155}
+\end{align*}
+
+\textbf{b) If a person passes the cardiogram test, what is the probability that the person has a normal heart?}
+\begin{center}
+	This is a conditional probability problem. It is asking for the probability of a person having a normal heart given the fact that they pass a cardiogram test; symbolically this is $P(A|D)$:
+\end{center}
+\begin{align*}
+	P(A|D) &= \frac{P(A \cap D)}{P(D)} \\
+	&= \frac{0.82 \cdot 0.95}{0.8155} \\
+	&= \boxed{0.9552}
+\end{align*}
+
+\textbf{c) If a person does not pass the cardiogram test, what is the probability that the person has minor heart problems?}
+\begin{center}
+	This again boils down to conditional probability. Written symbolically, it's $P(B|D')$:
+\end{center}
+\begin{align*}
+	P(B|D') &= \frac{P(B \cap D')}{P(D')} \\
+	&= \frac{P(B \cap D')}{1-P(D)} \\
+	&= \frac{(0.11) \cdot (0.11 \cdot (1-0.30))}{1-0.8155} \\
+	&= \boxed{0.04591}
+\end{align*}
+
+\pagebreak
+
+\textbf{16. A consulting firm rents cars from three agencies, 20\% from agency A, 20\% from agency B, and 60\% from agency C.  10\% of the cars from A, 12\% of the cars from B, and 4\% of the cars from C have bad tires.}
+
+\textbf{a) What is the probability that the firm will get a car with bad tires?}
+\begin{center}
+	Let's define event A to be that a car comes from agency A, B to mean that a car comes from agency B, C to mean that a car comes from agency C, and D to mean that a car has bad tires:
+\end{center}
+\begin{align*}
+	P(D) &= P(A \cap D) \cup P(B \cap D) \cup P(C \cap D) \\
+	&= (0.20 \cdot 0.10) + (0.20 \cdot 0.12) + (0.60 \cdot 0.04) \\
+	&= \boxed{0.068}
+\end{align*}
+
+\textbf{b) If the firm rented a car with bad tires, what is the probability that it was from agency C?}
+\begin{center}
+	This is a conditional probability problem. It is asking for the probability of a car being from agency C given the fact that the car has bad tires; symbolically this is $P(C|D)$:
+\end{center}
+\begin{align*}
+	P(C|D) &= \frac{P(C \cap D)}{P(D)} \\
+	&= \frac{0.60 \cdot 0.04}{0.068} \\
+	&= \boxed{0.3529}
+\end{align*}
+
+\pagebreak
+
+\textbf{c) If the firm rented a car with good tires, what is the probability that it was not rented from agency A?}
+\begin{center}
+	This again boils down to conditional probability. Written symbolically, it's $P(A'|D')$. Since this problem was particularly tricky, I've included annotations where I've used certain probability theorems:
+\end{center}
+\begin{align*}
+	P(A'|D') &= \frac{P(A' \cap D')}{P(D')} \\
+	&= \frac{1-P(A \cup D)}{1-P(D)} \text{	(DeMorgan's Law \& Prob. Axiom)}\\
+	&= \frac{1-(P(A)+P(D)-P(A \cap D))}{1-P(D)} \text{	(Addition Rule)}\\
+	&= \frac{1-(0.20+0.068-0.02)}{1-0.068} \\
+	&= \boxed{0.8067}
+\end{align*}
+\end{document}

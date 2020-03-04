@@ -1,0 +1,203 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{sectsty}
+\usepackage[margin=0.9in]{geometry}
+
+\sectionfont{\centering}
+\setlist[enumerate]{font=\bfseries}
+\newenvironment{nscenter}
+	{\parskip=0pt\par\nopagebreak\centering}
+	{\par\noindent\ignorespacesafterend}
+
+\title{Homework 13}
+\author{Martin Mueller}
+\date{Due: May $10^{th}$, 2019}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 8}
+
+\begin{enumerate}
+	\setcounter{enumi}{3}
+	\item (10 points) The time (in days) taken by a certain large bank to approve a home loan is normally distributed with standard deviation 1 day. The bank advertises that it approves loans in 5 days, on average. The data on a random sample of 80 loan applications to this bank gave a mean approval time of 5.2 days.
+	\begin{enumerate}
+		\item Is there evidence to support the claim that the mean time to approval is actually more than advertised? Test the appropriate hypothesis at level of significance 0.05.
+		\begin{align*}
+			H_{0}&: \mu = 5 \\
+			H_{a}&: \mu > 5
+		\end{align*}
+		\begin{align*}
+			z_{0.05} &= 1.64 \\
+			z &= \frac{\bar{x} - \mu_{0}}{\sigma / \sqrt{n}} \\
+			&= \frac{5.2 - 5}{1 / \sqrt{80}} \\
+			&= 1.79
+		\end{align*}
+		\begin{nscenter}
+			Since $z \geq z_{\alpha}$, we reject the null hypothesis and can conclude that there is evidence to suggest that the mean approval time is more than advertised. $\square$
+		\end{nscenter}
+		\item What is the smallest level of significance at which the null hypotheses can be rejected for this sample?
+		\begin{align*}
+			z &= 1.79 \\
+			\phi(z) &= .9633 \\
+			1 - .9633 &= \boxed{.0367}
+		\end{align*}
+		\item Find the probability of type II error if the true mean approval time is 5.5 days.
+		\begin{align*}
+			\beta(5.5) &= \frac{5.2 - 5.5}{1 / \sqrt{80}} \\
+			&= -2.68 \\
+			\phi(-2.68) &= \boxed{.0037}
+		\end{align*}
+	\end{enumerate}
+	\setcounter{enumi}{5}
+	\item (10 points) The scores on a college placement exam in mathematics are assumed to have a normal distribution with a mean of 70. The exam is given to a random sample of 25 high school seniors who have been admitted to the college. Their average score on the exam was 65. Is their evidence to suggest that the population mean score is lower than 70?
+	\begin{enumerate}
+		\item Assuming it is known that $\sigma = 12$, test the appropriate hypothesis at a level $\alpha = 0.05$.
+		\begin{align*}
+			H_{0}&: \mu = 70 \\
+			H_{a}&: \mu < 70
+		\end{align*}
+		\begin{align*}
+			-z_{0.05} &= -1.64 \\
+			z &= \frac{\bar{x} - \mu_{0}}{\sigma / \sqrt{n}} \\
+			&= \frac{65 - 70}{12 / \sqrt{25}} \\
+			&= -2.08
+		\end{align*}
+		\begin{nscenter}
+			Since $z \leq -z_{\alpha}$, we reject the null hypothesis and can conclude that there is evidence to suggest that the mean score is lower than 70. $\square$
+		\end{nscenter}
+		\item What is the smallest level of significance at which the null hypotheses can be rejected for this sample?
+		\begin{align*}
+			z &= -2.08 \\
+			\phi(z) &= \boxed{.0188}
+		\end{align*}
+		\item What is $\beta(68)$ for the test used in part \textbf{(a)}?
+		\begin{align*}
+			\beta(68) &= \frac{65 - 68}{12 / \sqrt{25}} \\
+			&= -1.25 \\
+			\phi(-1.25) &= \boxed{.1056}
+		\end{align*}
+	\end{enumerate}
+	\setcounter{enumi}{10}
+	\item (10 points) The president of a university claims that the mean time spent studying by all students at the university is 15 hours per week. A simple random sample of 25 students taken from this university showed that they spent an average of 16.5 hours studying the previous week with a with standard deviation of 5.2 hours. Assume that the time spent studying at this university has a normal distribution.
+	\begin{enumerate}
+		\item Are these data evidence that the students at this university study more than claimed by the president? Test the appropriate hypothesis at a significance level of $\alpha = 0.05$.
+		\pagebreak
+		\begin{align*}
+			H_{0} &= \mu = 15 \\
+			H_{a} &= \mu > 15
+		\end{align*}
+		\begin{nscenter}
+			Since we don't know the population's standard deviation and $n \leq 40$, we must use the $t$-distribution:
+		\end{nscenter}
+		\begin{align*}
+			t_{0.05, 24} &= 1.711 \\
+			t &= \frac{\bar{x} - \mu_{0}}{s / \sqrt{n}} \\
+			&= \frac{16.5 - 15}{5.2 / \sqrt{25}} \\
+			&= 	1.44
+		\end{align*}
+		\begin{nscenter}
+			Since $t \leq t_{\alpha, n-1}$, we fail to reject the null hypothesis and cannot conclude that there is evidence to suggest that the mean time spent studying is greater than 15 hours per week. $\square$
+		\end{nscenter}
+		\item Find the P-value.
+		\begin{align*}
+			\alpha_{t, v} &= \alpha_{1.4, 24} \\
+			&= \boxed{.087}
+		\end{align*}
+	\end{enumerate}
+	\item (10 points) The scores on a college placement exam in mathematics are assumed to have a normal distribution with a mean of 70. The exam is given to a random sample of 25 high school seniors who have been admitted to the college. Their average score on the exam was 65 and the standard deviation was 16. Is their evidence to suggest that the population mean score is lower than 70?
+	\begin{enumerate}
+		\item Test the appropriate hypothesis at level of significance 0.05.
+		\begin{align*}
+			H_{0}&: \mu = 70 \\
+			H_{a}&: \mu < 70
+		\end{align*}
+		\begin{nscenter}
+			Since we don't know the population's standard deviation and $n \leq 40$, we must use the $t$-distribution:
+		\end{nscenter}
+		\begin{align*}
+			t_{0.05, 24} &= 1.711 \\
+			-t &= -\frac{\bar{x} - \mu_{0}}{s / \sqrt{n}} \\
+			&= -\frac{65 - 70}{16 / \sqrt{25}} \\
+			&= 	1.56
+		\end{align*}
+		\begin{nscenter}
+			Since $-t \leq t_{\alpha, n-1}$, we reject the null hypothesis and can conclude that there is evidence to suggest that the population mean score is lower than 70. $\square$
+		\end{nscenter}
+		\pagebreak
+		\item Find the P-value.
+		\begin{align*}
+			\alpha_{t, v} &= \alpha_{1.6, 24} \\
+			&= \boxed{.061}
+		\end{align*}
+	\end{enumerate}
+	\setcounter{enumi}{13}
+	\item (10 points) A manufacture of ceramic pistons for an experimental diesel engine selects 100 pistons for test, and find 15 pistons were cracked.
+	\begin{enumerate}
+		\item Is there evidence to suggest that less than 20\% of all pistons manufactures are cracked? Test the appropriate hypothesis at level of significance 0.05.
+		\begin{align*}
+			H_{0}&: \mu = .2 \\
+			H_{a}&: \mu < .2
+		\end{align*}
+		\begin{nscenter}
+			Since $n \cdot p_{0} = 100 \cdot .2 = 20 \geq 10$ and $n \cdot (1-p_{0}) = 100 \cdot .8 = 80 \geq 10$, we can assume the population is normal:
+		\end{nscenter}
+		\begin{align*}
+			-z_{0.05} &= -1.64 \\
+			z &= \frac{\hat{p} - p_{0}}{\sqrt{p_{0}(1-p_{0}) / n}} \\
+			&= \frac{15/100 - .2}{\sqrt{.2(1-.2) / 100}} \\
+			&= -1.25
+		\end{align*}
+		\begin{nscenter}
+			Since $z \geq -z_{\alpha}$, we fail to reject the null hypothesis and cannot conclude that there is evidence to suggest that the population proportion is lower than 20\%. $\square$
+		\end{nscenter}
+		\item Find the P-value.
+		\begin{align*}
+			z &= -1.25 \\
+			\phi(z) &= \boxed{.1056}
+		\end{align*}
+		\item Find the probability of type II error if 18\% of all pistons manufactures are cracked.
+		\begin{align*}
+			\beta(.18) &= \frac{15/100 - .18}{\sqrt{.18(1-.18) / 100}} \\
+			&= -0.52 \\
+			\phi(-0.52) &= \boxed{.3015}
+		\end{align*}
+	\end{enumerate}
+	\setcounter{enumi}{15}
+	\item (10 points) A semiconductor manufacturer produces controllers used in automobile engine applications. The customer requires that the fraction of defective controllers not to exceed .06.  The semiconductor manufacturer takes a random sample of 200 controllers and finds that 6 of them are defective.
+	\begin{enumerate}
+		\item Test the appropriate hypothesis at level of significance 0.05.
+		\pagebreak
+		\begin{align*}
+			H_{0}&: \mu = .06 \\
+			H_{a}&: \mu > .06
+		\end{align*}
+		\begin{nscenter}
+			Since $n \cdot p_{0} = 200 \cdot .06 = 12 \geq 10$ and $n \cdot (1-p_{0}) = 200 \cdot .94 = 188 \geq 10$, we can assume the population is normal:
+		\end{nscenter}
+		\begin{align*}
+			z_{0.05} &= 1.64 \\
+			z &= \frac{\hat{p} - p_{0}}{\sqrt{p_{0}(1-p_{0}) / n}} \\
+			&= \frac{6/200 - .06}{\sqrt{.06(1-.06) / 200}} \\
+			&= -1.79
+		\end{align*}
+		\begin{nscenter}
+			Since $z \leq -z_{\alpha}$, we fail to reject the null hypothesis and cannot conclude that there is evidence to suggest that the population proportion is higher than .06. $\square$
+		\end{nscenter}
+		\item Find the P-value.
+		\begin{align*}
+			z &= -1.79 \\
+			\phi(z) &= \boxed{.0367}
+		\end{align*}
+		\item Find the probability of type II error if the fraction defective is .03.
+		\begin{align*}
+			\beta(.03) &= \frac{6/200 - .03}{\sqrt{.03(1-.03) / 200}} \\
+			&= 0 \\
+			\phi(0) &= \boxed{.5000}
+		\end{align*}
+	\end{enumerate}
+\end{enumerate}
+\end{document}

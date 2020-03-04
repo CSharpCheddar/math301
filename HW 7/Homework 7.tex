@@ -1,0 +1,133 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+
+\title{Homework 7}
+\author{Martin Mueller}
+\date{Due: March $22^{nd}$, 2019}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+	\underline{\textbf{Chapter 3}}
+\end{center}
+
+\textbf{20. If the probability of having a male or a female child are both .50, find the probability that...}
+
+\qquad \textbf{a) ...a family's fourth child is their first son.}
+\begin{center}
+	Determining the probability of a certain number of successes after a certain number of trials tends to indicate we should use the negative binomial distribution:
+	$$P(X=x) = {}_{x+r-1}C_{x}(1-p)^{x}p^{r}$$
+	\textit{where}
+	\begin{align*}
+		x &\equiv \text{the number of failures before the }r^{th}\text{ success} \\
+		r &\equiv \text{the number of successes} \\
+		p &\equiv \text{the probability of a success}
+	\end{align*}
+	In this case, $x=3$, because a success is considered having a boy, $r=1$, because that's the number of successes (how many boys the family wants), and $p=0.50$, because that's the probability of getting a success:
+	\begin{align*}
+		P(X=3) &= {}_{3+1-1}C_{3}(1-0.50)^{3}(0.50)^{1} \\
+		&= {}_{3}C_{3}(0.50)^{3}(0.50)^{1} \\
+		&= (0.50)^{4} \\
+		&= \boxed{0.0625}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{b) ...a family's seventh child is their second daughter.}
+\begin{center}
+	In this case, $x=5$, $r=2$, and $p$ is still $0.50$:
+	\begin{align*}
+		P(X=5) &= {}_{5+2-1}C_{5}(1-0.50)^{5}(0.50)^{2} \\
+		&= {}_{6}C_{5}(0.50)^{7} \\
+		&= \boxed{0.0469}
+	\end{align*}
+\end{center}
+
+\textbf{22. When a fisherman catches a fish, if it is a young one it is returned to the water. On the other hand, an adult fish is kept to be eaten later. P(catching young fish) = .23.}
+
+\qquad \textbf{a) What is the probability that the fifth fish caught is the first young fish?}
+\begin{center}
+	Once again, we'll use the negative binomial distribution where $x=4$, $r=1$, and $p=0.23$.
+	\begin{align*}
+		P(X=4) &= {}_{4+1-1}C_{4}(1-0.23)^{4}(0.23)^{1} \\
+		&= {}_{4}C_{4}(0.77)^{4}(0.23)^{1} \\
+		&= \boxed{0.0809}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{b) Suppose the fisherman wants three fish to eat for lunch. What is the probability that the first time the fisherman can stop for lunch is immediately after the sixth fish has been caught?}
+\begin{center}
+	In this case, $x=3$, because in 6 trials, 3 of them are said to be successes, which means 3 are failures, $r=3$, because he wants 3 adult fish, and $p$ is still $0.23$.
+	\begin{align*}
+		P(X=3) &= {}_{3+3-1}C_{3}(1-0.23)^{3}(0.23)^{3} \\
+		&= {}_{5}C_{3}(0.77)^{3}(0.23)^{3} \\
+		&= \boxed{0.0555}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\textbf{24. The number of messages received by a computer bulletin board can be modeled by a Poisson process with rate 12 messages per hour. Find the probabilities that...}
+
+\qquad \textbf{a) ...10 messages are received in one hour.}
+\begin{center}
+	Right away, the problem describes a Poisson process, which means we should use the Poisson distribution:
+	$$P(x;\mu) = \frac{e^{-\mu} \cdot \mu^{x}}{x!}$$
+	\textit{where}
+	\begin{align*}
+		x &\equiv \text{the number of occurances in a time interval }t \\
+		\mu &\equiv \alpha t \\
+		\alpha &\equiv \text{rate of the Poisson process}
+	\end{align*}
+	In this case, $\mu = \alpha t = (\text{12 messages/hr})(\text{1 hr}) = \text{12 messages}$, and $x=\text{10 messages}$:
+	\begin{align*}
+		P(10;12) &= \frac{e^{-12} \cdot 12^{10}}{10!} \\
+		&= \boxed{0.1048}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{b) ...less than 20 messages are received in two hours.}
+\begin{center}
+	For this problem, we'll need to use the Poisson cumulative distribution function. This can be expressed like so (in this case):
+	$$\sum_{x=0}^{19} \frac{e^{-\mu} \cdot \mu^{x}}{x!}$$
+	In this case, $\mu = (\text{12 messages/hr})(\text{2 hrs}) = \text{24 messages}$, and $x$ can take any value from 0 to 19 (as shown by the summation):
+	$$\sum_{x=0}^{19} \frac{e^{-24} \cdot 24^{x}}{x!} = \boxed{0.1803}$$
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{c) ...at least 6 messages are received in 15 minutes.}
+\begin{center}
+	This problem is better approached by taking 1 minus the compliment of this event: the event in which less than 6 messages are received in 15 minutes. Here, $\mu = (\text{12 messages/hr})(0.25\text{ hrs}) = \text{3 messages}$, and $x$ can take any value from 0 to 5. Taking this information, we can solve the problem like so:
+	$$1-\sum_{x=0}^{5} \frac{e^{-3} \cdot 3^{x}}{x!} = \boxed{0.0839}$$
+\end{center}
+
+\textbf{25. The number of trucks arriving at a receiving dock follows a Poisson process with a rate of 2 per hour. Find the probability that...}
+
+\qquad \textbf{a) ...exactly 5 trucks arrive in a two-hour period.}
+\begin{center}
+	Once again, we should use the Poisson distribution. In this case, $\mu = (\text{2 trucks/hr})(\text{2 hrs}) = \text{4 trucks}$, and $x=\text{5 trucks}$:
+	\begin{align*}
+		P(5;4) &= \frac{e^{-4} \cdot 4^{5}}{5!} \\
+		&= \boxed{0.1563}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{b) ...at least 8 trucks arrive in a two-hour period.}
+\begin{center}
+	We'll need to use the Poisson cumulative distribution function for this one. In this case, $\mu = (\text{2 trucks/hr})(\text{2 hrs}) = \text{4 trucks}$. Since it's much easier to use the compliment of this event, let's consider $x$ to be less than 8. Writing this using sigma notation, we get:
+	$$1-\sum_{x=0}^{7} \frac{e^{-4} \cdot 4^{x}}{x!}=\boxed{0.0511}$$
+\end{center}
+
+\qquad \textbf{c) ...exactly 2 trucks arrive in a one-hour period and exactly 3 trucks arrive in the next one-hour period.}
+\begin{center}
+	In this particular case, since these two events are independent, we can simply multiply their probabilities together to get our result, once again using the Poisson distribution. Before we start, we notice that $\mu = (\text{2 trucks})(\text{1 hr}) = \text{2 trucks}$ for both experiments:
+	\begin{align*}
+		P(2;2) \cdot P(3;2) &= \frac{e^{-2} \cdot 2^{2}}{2!} \cdot \frac{e^{-2} \cdot 2^{3}}{3!} \\
+		&= \boxed{0.0488}
+	\end{align*}
+\end{center}
+\end{document}

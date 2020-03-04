@@ -1,0 +1,158 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{sectsty}
+
+\sectionfont{\centering}
+\setlist[enumerate]{font=\bfseries}
+\newenvironment{nscenter}
+	{\parskip=0pt\par\nopagebreak\centering}
+	{\par\noindent\ignorespacesafterend}
+
+\title{Homework 12}
+\author{Martin Mueller}
+\date{Due: May $3^{rd}$, 2019}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 7}
+
+\begin{enumerate}
+	\setcounter{enumi}{13}
+	\item (5 points) The scores on a college placement exam in mathematics are assumed to have a normal distribution. The exam is given to a random sample of 25 high school seniors who have been admitted to the college. Their average score on the exam was 65 and the standard deviation was 16. Calculate a 95\% confidence interval for the standard deviation of the mathematics placement exam score.
+	\begin{align*}
+		n &= 25 \\
+		s &= 16 \\
+		\alpha &= .05
+	\end{align*}
+	\begin{align*}
+		100(1 - \alpha)\% \text{ CI} &= \left(\sqrt{\frac{(n-1)s^{2}}{\chi^{2}_{\alpha/2, n-1}}}, \sqrt{\frac{(n-1)s^{2}}{\chi^{2}_{1-\alpha/2, n-1}}}\right) \\
+		95\% \text{ CI} &= \left(\sqrt{\frac{(25-1)(16)^{2}}{39.36}}, \sqrt{\frac{(25-1)(16)^{2}}{12.40}}\right) \\
+		&= \boxed{(12.49, 22.26)}
+	\end{align*}
+	
+	\item (5 points) A beverage machine is adjusted to release a certain amount of syrup into a chamber where it is mixed with carbonated water. A random sample of 25 beverages was found have a mean syrup content of 4.50 fluid ounces, and a standard deviation of 0.80 fluid ounces. Calculate a 98\% confidence interval for the standard deviation of the amount of syrup dispensed.
+	\begin{align*}
+		n &= 25 \\
+		s &= 0.80 \\
+		\alpha &= .02
+	\end{align*}
+	\begin{align*}
+		100(1 - \alpha)\% \text{ CI} &= \left(\sqrt{\frac{(n-1)s^{2}}{\chi^{2}_{\alpha/2, n-1}}}, \sqrt{\frac{(n-1)s^{2}}{\chi^{2}_{1-\alpha/2, n-1}}}\right) \\
+		98\% \text{ CI} &= \left(\sqrt{\frac{(25-1)(0.80)^{2}}{42.98}}, \sqrt{\frac{(25-1)(0.80)^{2}}{10.86}}\right) \\
+		&= \boxed{(0.5978, 1.1893)}
+	\end{align*}
+\end{enumerate}
+
+\section*{Chapter 8}
+
+\begin{enumerate}
+	\item (20 points) A researcher knows that the mean response time for rats not injected with a drug is 1.2 seconds. She wishes to test whether the mean response time for drug-injected rats differs from 1.2 seconds. A sample of drug-injected rats were tested.  Assume $n = 100$ and $\sigma = .5$.
+	\begin{enumerate}
+		\item What hypotheses should be tested?
+		\begin{align*}
+			H_{0}&: \mu \neq 1.2 \\
+			H_{a}&: \mu = 1.2
+		\end{align*}
+		
+		\item Which of the following rejection regions is most appropriate and why?
+		\begin{align*}
+			R_{1} &= \{\bar{x}:\bar{x} \le 1.102\} \\
+			R_{2} &= \{\bar{x}:\bar{x} \le 1.102 \text{ or } \bar{x} \ge 1.298\} \\
+			R_{3} &= \{\bar{x}:\bar{x} \ge 1.1298\}
+		\end{align*}
+		\begin{center}
+			$\boxed{R_{2}}$ is the most appropriate rejection region because we are checking equality. This means the rejection region should be bounded from both sides.
+		\end{center}
+		
+		\item Find the probability of type I error for the rejection region selected in \textbf{(b)}.
+		\begin{center}
+		First, we select the $Z$ value that yields the probability on the lower end:
+			\begin{align*}
+				Z &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+				&= \frac{1.102 - 1.2}{.5/\sqrt{100}} \\
+				&= -1.96
+			\end{align*}
+			This yields a probability of .0250. Since the normal distribution is symmetrical, this is also the probability of the mean being measured to be on the higher end. Taking the compliment of the sum of these two events will yield us the probability of a type I error:
+			$$1 - 2(.0250) = \boxed{.95}$$
+		\end{center}
+		
+		\item Find the probability of type II error for the selected rejection region when $\mu = 1.1$.
+		\begin{align*}
+			Z_{1} &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{1.102 - 1.1}{.5/\sqrt{100}} \\
+			&= .04 \\
+			\phi (Z_{1}) &= .5160
+		\end{align*}
+		\begin{align*}
+			Z_{2} &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{1.298 - 1.1}{.5/\sqrt{100}} \\
+			&= 3.96 \\
+			\phi (Z_{2}) &= 1
+		\end{align*}
+		$$1 - .5160 = \boxed{.4840}$$
+		
+		\item Find the probability of type II error for the selected rejection region when $\mu = 1.4$.
+		\begin{align*}
+			Z_{1} &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{1.102 - 1.4}{.5/\sqrt{100}} \\
+			&= -5.96 \\
+			\phi (Z_{1}) &= 0
+		\end{align*}
+		\begin{align*}
+			Z_{2} &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{1.298 - 1.4}{.5/\sqrt{100}} \\
+			&= -2.04 \\
+			\phi (Z_{2}) &= .0207
+		\end{align*}
+		$$ .0207 - 0 = \boxed{.0207}$$
+	\end{enumerate}
+	
+	\item (20 points) A researcher believes the number of latex gloves used per week by hospital employee is less than 20. A sample of hospital employees were tested. Assume $n = 46$ and $\sigma = 11.9$.
+	\begin{enumerate}
+		\item What hypotheses should be tested?
+		\begin{align*}
+			H_{0}&: \mu \ge 20 \\
+			H_{a}&: \mu < 20
+		\end{align*}
+		
+		\item Which of the following rejection regions is most appropriate and why?
+		\begin{align*}
+			R_{1} &= \{\bar{x}:\bar{x} \le 15.92\} \\
+			R_{2} &= \{\bar{x}:\bar{x} \le 15.92 \text{ or } \bar{x} \ge 24.08\} \\
+			R_{3} &= \{\bar{x}:\bar{x} \ge 24.08\}
+		\end{align*}
+		\begin{center}
+			$\boxed{R_{1}}$ is the most appropriate rejection region because since we're trying to prove an inequality, we need a one-sided bound, (specifically a lower bound because our null hypothesis states the mean is greater than a certain number).
+		\end{center}
+		
+		\item Find the probability of type I error for the rejection region selected in \textbf{(b)}.
+		\begin{align*}
+			Z &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{15.92 - 20}{11.9/\sqrt{46}} \\
+			&= -2.33 \\
+			\phi(Z) &= \boxed{.0099}
+		\end{align*}
+		
+		\item Find the probability of type II error for the selected rejection region when $\mu = 19$.
+		\begin{align*}
+			Z &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{15.92 - 19}{11.9/\sqrt{46}} \\
+			&= -1.76 \\
+			\phi (Z) &= .0392 \\
+			1 - .0392 &= \boxed{.9608}
+		\end{align*}
+		
+		\item Find the probability of type II error for the selected rejection region when $\mu = 14$.
+		\begin{align*}
+			Z &= \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \\
+			&= \frac{15.92 - 14}{11.9/\sqrt{46}} \\
+			&= 1.09 \\
+			\phi (Z) &= .8621 \\
+			1 - .8621 &= \boxed{.1379}
+		\end{align*}
+	\end{enumerate}
+\end{enumerate}
+\end{document}

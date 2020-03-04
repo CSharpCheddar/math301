@@ -1,0 +1,734 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.4)  6 APR 2019 13:56
+entering extended mode
+**"./Homework 8.tex"
+("Homework 8.tex"
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\art
+icle.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\siz
+e12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\
+amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\
+amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\
+amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\
+amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\
+amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots
+\pgfplots.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.revision.tex")
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\fron
+tendlayer\tikz.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basi
+clayer\pgf.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\util
+ities\pgfrcs.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen114
+\pgfutil@tempdimb=\dimen115
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfutil-common-lists.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfutil-latex.def"
+\pgfutil@abb=\box28
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\every
+shi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfrcs.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\pg
+f.revision.tex")
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basi
+clayer\pgfcore.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\syst
+emlayer\pgfsys.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen116
+\pgf@y=\dimen117
+\pgf@xa=\dimen118
+\pgf@ya=\dimen119
+\pgf@xb=\dimen120
+\pgf@yb=\dimen121
+\pgf@xc=\dimen122
+\pgf@yc=\dimen123
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count100
+\c@pgf@countb=\count101
+\c@pgf@countc=\count102
+\c@pgf@countd=\count103
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+\pgf@sys@id@count=\count104
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgf.cfg"
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count105
+\pgfsyssoftpath@bigbuffer@items=\count106
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\sy
+stemlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\x
+color.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics
+-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcore.code.tex"
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmath.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathcalc.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathutil.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen124
+\pgfmath@count=\count107
+\pgfmath@box=\box29
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.basic.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.trigonometric.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.random.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.comparison.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.base.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.round.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.misc.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfunctions.integerarithmetics.code.tex")))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count108
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen125
+\pgf@picmaxx=\dimen126
+\pgf@picminy=\dimen127
+\pgf@picmaxy=\dimen128
+\pgf@pathminx=\dimen129
+\pgf@pathmaxx=\dimen130
+\pgf@pathminy=\dimen131
+\pgf@pathmaxy=\dimen132
+\pgf@xx=\dimen133
+\pgf@xy=\dimen134
+\pgf@yx=\dimen135
+\pgf@yy=\dimen136
+\pgf@zx=\dimen137
+\pgf@zy=\dimen138
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen139
+\pgf@path@lasty=\dimen140
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen141
+\pgf@shorten@start@additional=\dimen142
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count109
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen143
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen144
+\pgf@pt@y=\dimen145
+\pgf@pt@temp=\dimen146
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen147
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen148
+\pgf@sys@shading@range@num=\count110
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box33
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ba
+siclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\mo
+dules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box34
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\mo
+dules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\comp
+atibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen149
+\pgf@nodesepend=\dimen150
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\comp
+atibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\util
+ities\pgffor.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\util
+ities\pgfkeys.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgfkeys.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math
+\pgfmath.sty"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmath.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ut
+ilities\pgffor.code.tex"
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\ma
+th\pgfmath.code.tex")
+\pgffor@iter=\dimen151
+\pgffor@skip=\dimen152
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\tikz.code.tex"
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\li
+braries\pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count111
+\pgfplotmarksize=\dimen153
+)
+\tikz@lastx=\dimen154
+\tikz@lasty=\dimen155
+\tikz@lastxsaved=\dimen156
+\tikz@lastysaved=\dimen157
+\tikzleveldistance=\dimen158
+\tikzsiblingdistance=\dimen159
+\tikz@figbox=\box35
+\tikz@figbox@bg=\box36
+\tikz@tempbox=\box37
+\tikz@tempbox@bg=\box38
+\tikztreelevel=\count112
+\tikznumberofchildren=\count113
+\tikznumberofcurrentchild=\count114
+\tikz@fig@count=\count115
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\mo
+dules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count116
+\pgfmatrixcurrentcolumn=\count117
+\pgf@matrix@numberofcolumns=\count118
+)
+\tikz@expandcount=\count119
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotscore.code.tex"
+\t@pgfplots@toka=\toks32
+\t@pgfplots@tokb=\toks33
+\t@pgfplots@tokc=\toks34
+\pgfplots@tmpa=\dimen160
+\c@pgfplots@coordindex=\count120
+\c@pgfplots@scanlineindex=\count121
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\sys\pgfplotssysgeneric.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\libs\pgfplotslibrary.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\li
+braries\pgflibraryfpu.code.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\oldpgfcompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\oldpgfcompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count122
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotsutil.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\liststructure\pgfplotsliststructure.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\liststructure\pgfplotsliststructureext.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\liststructure\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count123
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\liststructure\pgfplotsmatrix.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\numtable\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count124
+\t@pgfplotstable@a=\toks35
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\liststructure\pgfplotsdeque.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotsbinary.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotsbinary.data.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotsutil.verb.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\libs\pgflibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count125
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def")))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotscolormap.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\util\pgfplotscolor.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotsstackedplots.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotsplothandlers.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotsmeshplothandler.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotsmeshplotimage.code.tex")))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.scaling.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotscoordprocessing.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.errorbars.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.markers.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplotsticks.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplo
+ts\pgfplots.paths.code.tex")
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\mo
+dules\pgfmoduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen161
+\pgfdecoratedremainingdistance=\dimen162
+\pgfdecoratedinputsegmentcompleteddistance=\dimen163
+\pgfdecoratedinputsegmentremainingdistance=\dimen164
+\pgf@decorate@distancetomove=\dimen165
+\pgf@decorate@repeatstate=\count126
+\pgfdecorationsegmentamplitude=\dimen166
+\pgfdecorationsegmentlength=\dimen167
+)
+\tikz@lib@dec@box=\box39
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\li
+braries\decorations\pgflibrarydecorations.pathmorphing.code.tex"))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\li
+braries\decorations\pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count127
+\pgfplots@xmin@reg=\dimen168
+\pgfplots@xmax@reg=\dimen169
+\pgfplots@ymin@reg=\dimen170
+\pgfplots@ymax@reg=\dimen171
+\pgfplots@zmin@reg=\dimen172
+\pgfplots@zmax@reg=\dimen173
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fr
+ontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\li
+braries\pgflibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+("Homework 8.aux")
+\openout1 = `"Homework 8.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\s
+upp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count128
+\scratchdimen=\dimen174
+\scratchbox=\box40
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen175
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks37
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek
+\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek
+\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek
+\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Chiseled Adonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdi
+ek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
+your preamble.
+ on input line 10.
+
+[1
+
+{C:/Users/Chiseled Adonas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] ("Homework 8.aux") ) 
+Here is how much of TeX's memory you used:
+ 22503 strings out of 493323
+ 598649 string characters out of 3125673
+ 789055 words of memory out of 3000000
+ 25684 multiletter control sequences out of 15000+200000
+ 9367 words of font info for 34 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,13n,96p,727b,1927s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Chisele
+d Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb><C:/Users/Chiseled Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/Chiseled Adonas/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chiseled Adonas/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/Chiseled Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb><C:/Users/Chiseled Adonas/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chiseled Adonas/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Chisele
+d Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.
+pfb><C:/Users/Chiseled Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/Chiseled Adonas/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chiseled Adonas/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
+/Chiseled Adonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on "Homework 8.pdf" (11 pages, 159936 bytes).
+PDF statistics:
+ 89 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

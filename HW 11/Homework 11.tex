@@ -1,0 +1,194 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{sectsty}
+
+\sectionfont{\centering}
+\setlist[enumerate]{font=\bfseries}
+\newenvironment{nscenter}
+	{\parskip=0pt\par\nopagebreak\centering}
+	{\par\noindent\ignorespacesafterend}
+
+\title{Homework 11}
+\author{Martin Mueller}
+\date{Due: April $26^{th}$, 2019}
+
+\begin{document}
+\maketitle
+\section*{Chapter 7}
+\begin{enumerate}
+	\setcounter{enumi}{1}
+	\item (10 points) The director of quality at alight bulb factory needs to estimate the mean life of a large shipment of light bulbs. The standard deviation is known to be 100 hours. A random sample of 64 light bulbs has a sample average life of 350 hours.
+	\begin{enumerate}
+		\item Calculate a 98\% confidence interval for the true mean life of light bulbs.
+		\begin{nscenter}
+			$\alpha/2 = .01$ \\
+			$z_{\alpha/2} = 2.33$ \\
+			$\bar{x} = 350$ \\
+			$\sigma = 100$ \\
+			$n = 64$ \\
+			$\text{Large sample CI $(n > 40)$: } \bar{x} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$
+			\begin{align*}
+				\bar{x} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}} &= 350 \pm 2.33\frac{100}{\sqrt{64}} \\
+				&= 350 \pm 29.13
+			\end{align*}
+			$\boxed{(320.87, 379.13)}$
+		\end{nscenter}
+		
+		\pagebreak
+		
+		\item Suppose it is desired to estimate the true mean life of light bulbs within 10 hours with a 98\% confidence, how large a sample size is required?
+		\begin{center}
+			An interval accurate within 10 hours would mean that we're looking for an $\bar{x} \pm 5$:
+			\begin{align*}
+				5 &= z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \\
+				5 &= 2.33 \frac{100}{\sqrt{n}} \\
+				\sqrt{n} &= 2.33 \frac{100}{5} \\
+				\sqrt{n} &= 46.6 \\
+				n &= 2171.56
+			\end{align*}
+			Since we can't have a non-integer amount of samples, we'll round this up to $\boxed{2172}$.
+		\end{center}
+	\end{enumerate}
+	
+	\setcounter{enumi}{3}
+	\item (10 points) The lifetime of an electric component is known to be normally distributed with standard deviation 40 hours. A random sample of 64 electric components yields an average lifetime of 1280 hours.
+	\begin{enumerate}
+		\item Calculate a 96\% confidence interval for the mean lifetime of the electric component.
+		\begin{nscenter}
+			$\alpha/2 = .02$ \\
+			$z_{\alpha/2} = 2.05$ \\
+			$\bar{x} = 1280$ \\
+			$\sigma = 40$ \\
+			$n = 64$ \\
+			$\text{Large sample CI $(n > 40)$: } \bar{x} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$
+			\begin{align*}
+				\bar{x} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}} &= 1280 \pm 2.05\frac{40}{\sqrt{64}} \\
+				&= 1280 \pm 10.25
+			\end{align*}
+			$\boxed{(1269.75, 1290.25)}$
+		\end{nscenter}		
+		
+		\pagebreak
+		
+		\item Suppose it is desired to estimate the mean lifetime of the electric component with an error of 12 hours with a 96\% confidence, how large a sample size is required?
+		\begin{center}
+			An interval accurate within 12 hours would mean that we're looking for an $\bar{x} \pm 6$:
+			\begin{align*}
+				6 &= z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \\
+				6 &= 2.05 \frac{40}{\sqrt{n}} \\
+				\sqrt{n} &= 2.05 \frac{40}{6} \\
+				\sqrt{n} &= 13.67 \\
+				n &= 186.87
+			\end{align*}
+			Since we can't have a non-integer amount of samples, we'll round this up to $\boxed{187}$.
+		\end{center}
+	\end{enumerate}
+	
+	\setcounter{enumi}{5}
+	\item (5 points) Health care workers who use latex gloves with glove powder on a daily basis are particularly susceptible to developing latex allergy. In a sample of 46 hospital employees who were diagnosed with latex allergy, it was found that the number of gloves used per week had a mean of 19.3 gloves and a standard deviation of 11.9 gloves. Calculate a 94\% confidence interval for the mean number of latex gloves used per week by all health care workers with latex allergy.
+	\begin{nscenter}
+		$\alpha/2 = .03$ \\
+		$z_{\alpha/2} = 1.88$ \\
+		$\bar{x} = 19.3$ \\
+		$s = 11.9$ \\
+		$n = 46$ \\
+		$\text{Large sample CI $(n > 40)$: } \bar{x} \pm z_{\alpha/2}\frac{s}{\sqrt{n}}$
+		\begin{align*}
+			\bar{x} \pm z_{\alpha/2}\frac{s}{\sqrt{n}} &= 19.3 \pm 1.88\frac{11.9}{\sqrt{46}} \\
+			&= 19.3 \pm 3.30
+		\end{align*}
+		$\boxed{(16.0, 22.6)}$
+	\end{nscenter}
+	
+	\item (5 points) A manufacture of ceramic pistons for an experimental diesel engine selects 100 pistons for test, and find 15 pistons were cracked. Calculate a 94\% score confidence interval for the true proportion of cracked pistons.
+	\begin{center}
+		\begingroup
+		\addtolength{\jot}{1em}
+		\begin{align*}
+			\alpha/2 = .03 \quad & \quad z_{\alpha/2} = 1.88 \\
+			\hat{p} = \frac{15}{100} \quad & \quad n = 100 \\
+			\tilde{p} = &\frac{\hat{p} + z^{2}_{\alpha/2}/2n}{1 + z^{2}_{\alpha/2}/n} \\
+			\text{Large sample CI (n $>$ 40): }& \tilde{p} \pm z_{\alpha/2}\frac{\sqrt{\hat{p}(1 - \hat{p})/n + z^{2}_{\alpha/2}/4n^{2}}}{1 + z^{2}_{\alpha/2}/n}
+		\end{align*}
+		\endgroup
+		\begin{align*}
+			\tilde{p} &= \frac{\hat{p} + z^{2}_{\alpha/2}/2n}{1 + z^{2}_{\alpha/2}/n} \\
+			&= \frac{.15 + 1.88^{2}/2(100)}{1 + 1.88^{2}/100} \\
+			&= .1619
+		\end{align*}
+		\begin{align*}
+			\tilde{p} \pm z_{\alpha/2}\frac{\sqrt{\hat{p}(1 - \hat{p})/n + z^{2}_{\alpha/2}/4n^{2}}}{1 + z^{2}_{\alpha/2}/n} &= .1619 \pm 1.88\frac{\sqrt{.15(1 - .15)/100 + 1.88^{2}/4(100)^{2}}}{1 + 1.88^{2}/100} \\
+			&= .1619 \pm .0357
+		\end{align*}
+		$\boxed{(.1262, .1976)}$
+	\end{center}
+	
+	\pagebreak
+	
+	\setcounter{enumi}{8}
+	\item (5 points) When Mendel conducted his famous genetics experiments with peas, one sample of offspring consisted of 428 green peas and 152 yellow peas. Calculate a 92\% large sample confidence interval for the proportion of yellow peas.
+	\begin{center}
+		\begingroup
+		\addtolength{\jot}{1em}
+		\begin{align*}
+			\alpha/2 = .04 \quad & \quad z_{\alpha/2} = 1.75 \\
+			\hat{p} = \frac{152}{580} \quad & \quad n = 580 \\
+			\text{Large sample CI} = &\hat{p} \pm z_{\alpha/2}\sqrt{\hat{p}(1 - \hat{p})/n}
+		\end{align*}
+		\endgroup
+		\begin{align*}
+			\hat{p} \pm z_{\alpha/2}\sqrt{\hat{p}(1 - \hat{p})/n} &= .2621 \pm 1.75\sqrt{.2621(1 - .2621)/580} \\
+			&= .2621 \pm .0320
+		\end{align*}
+		$\boxed{(.2301, .2941)}$
+	\end{center}
+	
+	\item (5 points) A simple random sample of 16 Top Taste cereal boxes produced a mean net weight of 31.98 ounces with a standard deviation of .26 ounces. Assume that the net weights of all Top Taste cereal boxes have a normal distribution. Find a 98\% confidence interval for the mean net weight of Top Taste cereal boxes.
+	\begin{center}
+		Since the sample size is less than 40, we'll use the $t$ distribution:
+		\begin{align*}
+			\bar{x} = 31.98 \quad & \quad \alpha/2 = .01 \\
+			s = .26 \quad & \quad n = 16 \\
+			t_{\alpha/2, n-1} &= 2.602 \\
+			\text{Prediction interval: } & \bar{x} \pm t_{\alpha/2, n-1} \cdot s\sqrt{1 + \frac{1}{n}}
+		\end{align*}
+		\begin{align*}
+			\bar{x} \pm t_{\alpha/2, n-1} \cdot s\sqrt{1 + \frac{1}{n}} &= 31.98 \pm 2.602 \cdot .26\sqrt{1 + \frac{1}{16}} \\
+			&= 31.98 \pm .6973
+		\end{align*}
+		$\boxed{(31.2827, 32.6773)}$
+	\end{center}
+	
+	\setcounter{enumi}{11}
+	\item (10 points) The wall thickness of 16 glass bottles was measured by a quality control engineer. The sample mean was 1.10 mm, and the sample standard deviation was 0.08 mm.
+	\begin{enumerate}
+		\item Calculate a 90\% confidence interval for the true mean wall thickness.
+		\begin{center}
+			Once again, the small sample size lends itself to the $t$ distribution:
+			\begin{align*}
+			\bar{x} = 1.10 \quad & \quad \alpha/2 = .05 \\
+			s = 0.08 \quad & \quad n = 16 \\
+			t_{\alpha/2, n-1} &= 1.753 \\
+			\text{Prediction interval: } & \bar{x} \pm t_{\alpha/2, n-1} \cdot s\sqrt{1 + \frac{1}{n}}
+		\end{align*}
+		\begin{align*}
+			\bar{x} \pm t_{\alpha/2, n-1} \cdot s\sqrt{1 + \frac{1}{n}} &= 1.10 \pm 1.753 \cdot 0.08\sqrt{1 + \frac{1}{16}} \\
+			&= 1.10 \pm .1446
+		\end{align*}
+		$\boxed{(0.9554, 1.2446)}$
+		\end{center}
+		
+		\item Calculate a 90\% prediction interval for the wall thickness of the $17^{th}$ bottle selected from this population.
+		\begin{center}
+			This is the same thing, but we need $t_{\alpha/2, n}$ instead: $t_{\alpha/2, n} = 1.746$
+			\begin{align*}
+				\bar{x} \pm t_{\alpha/2, n} \cdot s\sqrt{1 + \frac{1}{n}} &= 1.10 \pm 1.746 \cdot 0.08\sqrt{1 + \frac{1}{16}} \\
+				&= 1.10 \pm .1440
+			\end{align*}
+			$\boxed{(0.956, 1.244)}$
+		\end{center}
+	\end{enumerate}
+\end{enumerate}
+\end{document}

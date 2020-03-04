@@ -1,0 +1,333 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\title{Homework 8}
+\author{Martin Mueller}
+\date{Due: April $5^{th}$, 2019}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+	\underline{\textbf{Chapter 4}}
+\end{center}
+
+\textbf{2. (15 points) A continuous random variable X has the following pdf:}
+\def\arraystretch{1.2}
+\begin{center}
+	\[f(x) = \left\{
+    		\begin{array}{cc}
+        		\frac{15}{64} + \frac{x}{64} & \: -2 \le x \le 0 \\
+        		\frac{3}{8} + kx & \quad 0 \le x \le 3 \\
+        		0 & \quad \text{otherwise}
+        	\end{array}
+        \right.\]
+\end{center}
+
+\qquad \textbf{a) Find the value of $k$ and sketch the graph of $f(x)$.}
+\begin{center}
+	By the properties of functions of continuous random variables, we know that $\int_{-\infty}^{\infty} f(x) \cdot dx = 1$. We can use this fact to solve for $k$ like so:
+	\begin{align*}
+		\int_{-2}^{0} \left[\frac{15}{64} + \frac{x}{64}\right] \cdot dx + \int_{0}^{3} \left[\frac{3}{8} + kx\right] \cdot dx + 0 &= \int_{-\infty}^{\infty} f(x) \cdot dx \\
+		\left[\frac{15x}{64} + \frac{x^{2}}{128}\right] \Bigg|_{-2}^{0} + \left[\frac{3x}{8} + \frac{kx^{2}}{2}\right] \Bigg|_{0}^{3} &= 1 \\
+		0 - \left[\frac{15(-2)}{64} + \frac{(-2)^{2}}{128}\right] + \left[\frac{3(3)}{8} + \frac{k(3)^{2}}{2}\right] - 0 &= 1 \\
+		\frac{36k + 9}{8} + \frac{7}{16} &= 1 \\
+		\frac{36k + 9}{8} &= \frac{9}{16} \\
+		k &= \boxed{- \frac{1}{8}}
+	\end{align*}
+	
+	\pagebreak	
+	
+	Plugging in $- \frac{1}{8}$ for $k$ in $f(x)$, we get the following graph:
+	
+	\begin{tikzpicture}
+		\begin{axis}[axis x line=middle, axis y line=middle,
+					 ymin=0, ymax=1, ytick=1, ylabel=$f(x)$,
+					 xmin=-3, xmax=4, xtick={-3,...,4}, xlabel=$x$,
+					 samples=100,]
+			\addplot[domain=-3:-2]{0};
+			\addplot[mark=*,fill=white] coordinates {(-2,0)};
+			\addplot[domain=-2:0]{(15/64)+(\x/64)};
+			\addplot[mark=*] coordinates {(-2,13/64)};
+			\addplot[mark=*] coordinates {(0,15/64)};
+			\addplot[domain=0:3]{((3/8)-(\x/8))};
+			\addplot[mark=*] coordinates {(0,3/8)};
+			\addplot[domain=3:4]{0};
+		\end{axis}
+	\end{tikzpicture}
+	
+	\textit{Note: This equation returns both $\frac{15}{64}$ and $\frac{3}{8}$ at $f(0)$.}
+\end{center}
+
+\qquad \textbf{b) Find the cdf of $X$.}
+\begin{center}
+	The cdf of $X$ is simply $\int_{-\infty}^{x} f(x) \cdot dx$. But since this is a piecewise function, we need to split this problem into a few parts. First, we'll take a look at the interval $[-2, 0]$:
+	\begin{align*}
+		\int_{-2}^{x} f(x) \cdot dx &= \int_{-2}^{x} \left[\frac{15}{64} + \frac{x}{64}\right] \cdot dx \\
+		&= \left[\frac{15x}{64} + \frac{x^{2}}{128}\right] \Bigg|_{-2}^{x} \\
+		&= \left[\frac{15x}{64} + \frac{x^{2}}{128}\right] - \left[\frac{15(-2)}{64} + \frac{(-2)^{2}}{128}\right] \\
+		&= \frac{x^{2}}{128} + \frac{15x}{64} + \frac{7}{16}
+	\end{align*}
+	Next, we'll handle the interval $[0, 3]$:
+	\begin{align*}
+		\int_{0}^{x} f(x) \cdot dx &= \int_{0}^{x} \left[\frac{3}{8} - \frac{x}{8}\right] \cdot dx \\
+		&= \left[\frac{3x}{8} - \frac{x^{2}}{16}\right] \Bigg|_{0}^{x} \\
+		&= \left[\frac{3x}{8} - \frac{x^{2}}{16}\right] - \left[\frac{3(0)}{8} + \frac{(0)^{2}}{16}\right] \\
+		&= \frac{3x}{8} - \frac{x^{2}}{16}
+	\end{align*}
+	Now there are just a couple of loose ends to tie up. Since this piecewise function is zero for $x < -2$ and $x > 3$, the integral is also zero, and therefore does not increase or decrease the probability over those intervals. Therefore, the cdf over the interval $(-\infty, -2)$ is $0$, and the cdf over the interval $[-2, 0]$ is $\int_{-2}^{x} f(x) \cdot dx$. Also, since the cdf must take into account probabilities before it, the cdf over the interval $[0, 3]$ must include $\int_{-\infty}^{0} f(x) \cdot dx$. Finally, since the probability does not increase for values of $x$ greater than $3$, the cdf is $1$ for $x$ values greater than $3$. With this information, we can construct the following cdf:
+	\[F(x) = \left\{
+    		\begin{array}{cc}
+    			0 & \qquad x < -2 \\
+    			\frac{x^{2}}{128} + \frac{15x}{64} + \frac{7}{16} & \; -2 \le x \le 0\\
+        		-\frac{x^{2}}{16} + \frac{3x}{8} + \frac{7}{16} & \quad 0 \le x \le 3 \\
+        		1 & \quad x > 3
+        	\end{array}
+        \right.\]
+\end{center}
+
+\qquad \textbf{c) Find $P(-1 \le X \le 1)$.}
+\begin{center}
+	Keeping in mind that we must use two different equations because of the given interval, we can write this problem like so:
+	\begin{align*}
+		P(-1 \le X \le 1) &= F(1)-F(-1) \\
+		&= \left[-\frac{(1)^{2}}{16} + \frac{3(1)}{8} + \frac{7}{16}\right] - \left[\frac{(-1)^{2}}{128} + \frac{15(-1)}{64} + \frac{7}{16}\right] \\
+		&= \left[\frac{9}{16}\right] - \left[\frac{27}{128}\right] \\
+		&= \boxed{\frac{45}{128}}
+	\end{align*}
+\end{center}
+
+\textbf{3. (20 points) A continuous random variable $X$ has the following pdf:}
+\begin{center}
+	\begin{align*}
+		f(x) &= k(4-x^{2}) & -2 \le x \le 2 \\
+		&=0 & \text{otherwise}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{a) Find the value of $k$.}
+\begin{center}
+	Just as in 2a, we know that $\int_{-\infty}^{\infty} f(x) \cdot dx = 1$. However, since this function is $0$ for $-2 \le x \le 2$, we can write that as:
+	\begin{align*}
+		\int_{-2}^{2} k(4 - x^{2}) \cdot dx &= 1 \\
+		k \left[4x - \frac{x^{3}}{3}\right] \Bigg|_{-2}^{2} &= 1 \\
+		k\left(4(2) - \frac{(2)^{3}}{3} - 4(-2) + \frac{(-2)^{3}}{3}\right) &= 1 \\
+		\frac{32}{3}k &= 1 \\
+		k &= \boxed{\frac{3}{32}}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{b) Find the cdf of $x$.}
+\begin{center}
+	For the same reasons explained in 2b, the cdf is $0$ over the interval $(-\infty, -2)$ and $1$ over the interval $(2, \infty)$. In between those intervals, it's just $\int_{-2}^{x} f(x) \cdot dx$. We can find this using the value for $k$ obtained in part a:
+	\begin{align*}
+		\int_{-2}^{x} f(x) \cdot dx &= \int_{-2}^{x} \frac{3}{32}(4 - x^{2}) \cdot dx \\
+		&= \frac{3}{32}\left[4x - \frac{x^{3}}{3}\right] \Bigg|_{-2}^{x} \\
+		&= \frac{3}{32}\left[4x - \frac{x^{3}}{3} - 4(-2) + \frac{(-2)^{2}}{3}\right] \\
+		&= \frac{x^{3}}{32} + \frac{3x}{8} + \frac{1}{2}
+	\end{align*}
+	
+	\pagebreak	
+	
+	Now we can take the above information and use it to construct the cdf:
+	\[F(x) = \left\{
+    		\begin{array}{cc}
+    			0 & \qquad x < -2 \\
+    			-\frac{x^{3}}{32} + \frac{3x}{8} + \frac{1}{2} & \; -2 \le x \le 2 \\
+        		1 & \quad \; x > 2
+        	\end{array}
+        \right.\]
+\end{center}
+
+\qquad \textbf{c) Find $P(-1 < x < 1)$.}
+\begin{center}
+	Similar to 2c:
+	\begin{align*}
+		P(-1 < x < 1) &= F(1) - F(-1) \\
+		&= \left[-\frac{(1)^{3}}{32} + \frac{3(1)}{8} + \frac{1}{2}\right] - \left[-\frac{(-1)^{3}}{32} + \frac{3(-1)}{8} + \frac{1}{2}\right] \\
+		&= \left[\frac{27}{32}\right] - \left[\frac{5}{32}\right] \\
+		&= \boxed{\frac{11}{16}}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{d) Find $P(x > 0.5)$.}
+\begin{center}
+	This can be rewritten like so:
+	\begin{align*}
+		P(x > 0.5) = 1 - P(x \le 0.5) &= 1 - F(0.5) \\
+		&= 1 - \left[-\frac{(0.5)^{3}}{32} + \frac{3(0.5)}{8} + \frac{1}{2}\right] \\
+		&= 1 - [0.6836] \\
+		&= \boxed{0.3164}
+	\end{align*}
+\end{center}
+
+\textbf{5. (30 points) A continuous random variable $X$ has the following pdf:}
+\begin{center}
+	\begin{align*}
+		f(x) &= k(1+x) & 2 \le x \le 5 \\
+		&=0 & \text{otherwise}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{a) Find the value of $k$.}
+\begin{center}
+	\begin{align*}
+		\int_{2}^{5} k(1 + x) \cdot dx &= \int_{-\infty}^{\infty} f(x) \cdot dx \\
+		k\left[x + \frac{x^{2}}{2}\right] \Bigg|_{2}^{5} &= 1 \\
+		k\left[(5) + \frac{(5)^{2}}{2} - (2) - \frac{(2)^{2}}{2}\right] &= 1 \\
+		\frac{27}{2}k &= 1 \\
+		k &= \boxed{\frac{2}{27}}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{b) Find the cdf of $X$.}
+\begin{center}
+	\begin{align*}
+		\int_{2}^{x} f(x) \cdot dx &= \frac{2}{27}\left[x + \frac{x^{2}}{2}\right] \Bigg|_{2}^{x} \\
+		&= \frac{2}{27}\left[x + \frac{x^{2}}{2} - (2) - \frac{(2)^{2}}{2}\right] \\
+		&= \frac{x^{2}}{27} + \frac{2x}{27} - \frac{8}{27}
+	\end{align*}
+	
+	\[F(x) = \left\{
+    		\begin{array}{cc}
+    			0 & x < 2 \\
+    			\frac{x^{2}}{27} + \frac{2x}{27} - \frac{8}{27} & 2 \le x \le 5 \\
+        		1 & x > 5
+        	\end{array}
+        \right.\]
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{c) Find $P(1 < x < 4)$.}
+\begin{center}
+	\begin{align*}
+		P(1 < x < 4) = P(2 < x < 4) &= F(4) - F(2) \\
+		&= \left[\frac{(4)^{2}}{27} + \frac{2(4)}{27} - \frac{8}{27}\right] - \left[\frac{(2)^{2}}{27} + \frac{2(2)}{27} - \frac{8}{27}\right] \\
+		&= \left[\frac{16}{27}\right] - \left[-\frac{8}{27}\right] \\
+		&= \boxed{\frac{24}{27}}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{d) Find $E(X)$.}
+\begin{center}
+	The definition of an expected value over a continuous interval is $\int_{-\infty}^{\infty}x \cdot f(x) \cdot dx$. Adjusting this for the context of the problem, we get:
+	\begin{align*}
+		\int_{-\infty}^{\infty}x \cdot f(x) \cdot dx &= \int_{2}^{5} \frac{2x}{27}\left(1 + x\right) \cdot dx \\
+		&= \int_{2}^{5} \left[\frac{2x^{2}}{27} + \frac{2x}{27}\right] \cdot dx \\
+		&= \left[\frac{2x^{3}}{81} + \frac{2x^{2}}{54}\right] \Bigg|_{2}^{5} \\
+		&= \left[\frac{2(5)^{3}}{81} + \frac{2(5)^{2}}{54} - \frac{2(2)^{3}}{81} - \frac{2(2)^{2}}{54}\right] \\
+		&= \boxed{\frac{11}{3}}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{e) Find $V(X)$.}
+\begin{center}
+	The definition of an variance over a continuous interval is $\int_{-\infty}^{\infty}x^{2} \cdot f(x) \cdot dx$. Adjusting this for the context of the problem, we get:
+	\begin{align*}
+		\int_{-\infty}^{\infty}x^{2} \cdot f(x) \cdot dx &= \int_{2}^{5} \frac{2x^{2}}{27}\left(1 + x\right) \cdot dx \\
+		&= \int_{2}^{5} \left[\frac{2x^{3}}{27} + \frac{2x^{2}}{27}\right] \cdot dx \\
+		&= \left[\frac{2x^{4}}{108} + \frac{2x^{3}}{81}\right] \Bigg|_{2}^{5} \\
+		&= \left[\frac{2(5)^{4}}{108} + \frac{2(5)^{3}}{81} - \frac{2(2)^{4}}{108} - \frac{2(2)^{3}}{81}\right] \\
+		&= \boxed{25.7407}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{f) Find the median of the distribution.}
+\begin{center}
+	The median of a distribution is a value such that 50\% of the values fall below it and 50\% of the values lie above it. In terms of a formula, this would mean the mean is the value $x$ such that $\int_{-\infty}^{x} f(x) \cdot dx = 0.50$. Rewriting this in the context of this problem, we get:
+	\begin{align*}
+		\int_{-\infty}^{x} f(x) \cdot dx &= 0.50 \\
+		\int_{2}^{x} \frac{2}{27}(1 + x) \cdot dx &= 0.50 \\
+		\frac{2}{27}\left[x + \frac{x^{2}}{2}\right] \Bigg|_{2}^{x} &= 0.50 \\
+		\frac{2}{27}\left[x + \frac{x^{2}}{2} - (2) - \frac{(2)^{2}}{2}\right] &= 0.50 \\
+		\frac{x^{2}}{27} + \frac{2x}{27} - \frac{8}{27} &= 0.50 \\
+		\frac{x^{2}}{27} + \frac{2x}{27} - \frac{43}{54} &= 0
+	\end{align*}
+
+	\pagebreak	
+	
+	Using the quadratic formula, we get two values for $x$, however we can discard the negative number, since it's not possible to have a negative median in this case. This leaves us with one possible value:
+	$$x = \boxed{3.7434}$$
+\end{center}
+
+\textbf{8. (10 points) The time required to complete a loan application is normally distributed with mean 80 minutes and standard deviation 14 minutes. Find the probability that an application is completed in...}
+
+\qquad \textbf{a) ...more than 102 minutes.}
+\begin{center}
+	In order to use the standard normal distribution, we need to use the following formula to obtain the correct value of $x$ to look for in the table:
+	$$z = \frac{x - \mu}{\sigma} = \frac{102 - 80}{14} = 1.57$$
+	Now since this problem is actually asking for the area to the right of this point, we need to use the compliment of the value we obtain from the standard normal values:
+	$$\phi(1.57) = 0.4418$$
+	$$1 - 0.4418 = \boxed{0.5582}$$
+\end{center}
+
+\qquad \textbf{b) ...between 60 and 118 minutes.}
+\begin{center}
+	Combining some of the steps we did above, we can calculate this by taking the difference of two standard normal values:
+	$$\phi\left(\frac{118 - 80}{14}\right) - \phi\left(\frac{60 - 80}{14}\right) = 0.9967 - 0.0766 = \boxed{0.9201}$$
+\end{center}
+
+\textbf{10. (20 points) The scores on a statistics exam are normally distributed with a mean of 70 and a standard deviation of 9.}
+
+\pagebreak
+
+\qquad \textbf{a) What is the probability the scores are below 50?}
+\begin{center}
+	This one simply just involves finding the proper $x$ value, then looking up the value we need in the table:
+	$$\phi\left(\frac{50 - 70}{9}\right) = \phi(-2.22) = \boxed{0.0132}$$
+\end{center}
+
+\qquad \textbf{b) What is the probability the scores are above 86?}
+\begin{center}
+	Just like in 8a, we need to use the compliment:
+	$$1 - \phi\left(\frac{86 - 70}{9}\right) = 1 - \phi(1.78) = \boxed{0.0384}$$
+\end{center}
+
+\qquad \textbf{c) What is the probability the scores are between 82 and 92?}
+\begin{center}
+	This is basically the same as 8c:
+	$$\phi\left(\frac{92 - 70}{9}\right) - \phi\left(\frac{82 - 70}{9}\right) = \phi(2.44) - \phi(1.33) = \boxed{0.0844}$$
+\end{center}
+
+\qquad \textbf{d) If the bottom 8\% of the students will get an F for the exam, what is the lowest score a student must get in order to avoid getting an F?}
+\begin{center}
+	In this case, we have to work backwards. First, we find the $z$ value that gets a probability of 0.08; the closest is $-1.41$. Now we work backwards to find the $x$ value in terms of this problem:
+	\begin{align*}
+		\frac{x - 70}{9} &= -1.41 \\
+		x &= 57.31 \approx \boxed{58}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{e) If the top 6\% of the students will get an A for the exam, what is the lowest score a student must get in order to get an A?}
+\begin{center}
+	Just like in part d, we have to work backwards, but this time, we have to look for a different probability than what we're given. The table gives us the \textit{top} 6\%, which means we need to find the $z$ value that gives a probability of $0.9400$, in this case $1.56$. Now it becomes the same as part d:
+	\begin{align*}
+		\frac{x - 70}{9} &= 1.56 \\
+		x &= 84.04 \approx \boxed{85}
+	\end{align*}
+\end{center}
+
+\textbf{13. (10 points) Suppose that 12\% of all people in a certain state are smokers. Assume that 1400 people are independently surveyed. Approximate each of the following:}
+
+\qquad \textbf{a) The probability that more than 200 are smokers.}
+\begin{center}
+	First, let's verify we can approximate this with a normal distribution:
+	$$np = (1400)(0.12) = 168$$
+	$$np(1 - p) = (168)(1 - 0.12) = 147.84$$
+	Since both of these values are above $10$, a normal approximation will work nicely. Now we just need $\mu$ and $\sigma$. Conveniently, we've already calculated them above ($\mu = np$ and $\sigma = np(1 - p)$). Now we just plug these values into $\phi$, and take its compliment because we need the area to the right of the given point:
+	$$1 - \phi\left(\frac{200 - 168}{147.84}\right) = 1 - \phi(0.22) = \boxed{0.4129}$$
+\end{center}
+
+\qquad \textbf{b) The probability that between 155 and 208 (both inclusive) are smokers.}
+\begin{center}
+	Using the values for $\mu$ and $\sigma$ that we calculated from above, we can just plug these right into $\phi$:
+	$$\phi\left(\frac{208 - 168}{147.84}\right) - \phi\left(\frac{155 - 168}{147.84}\right) = \phi(0.27) - \phi(-0.09) = \boxed{0.1423}$$
+\end{center}
+\end{document}

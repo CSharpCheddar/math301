@@ -1,0 +1,167 @@
+\documentclass[12pt, letter]{article}
+
+\usepackage{amsmath}
+
+\title{Homework 6}
+\author{Martin Mueller}
+\date{Due: March $15^{th}$, 2019}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+	\underline{\textbf{Chapter 3}}
+\end{center}
+
+\textbf{13. An agricultural cooperative claims that 95\% of the watermelons shipped out are ripe and ready to eat.  Find the probability that among 20 watermelons shipped out,...}
+
+\qquad \textbf{a) ...exactly 15 are ripe and ready to eat.}
+\begin{center}
+	This problem satisfies all the conditions of a binomial experiment. Since it is asking for the probability of a specific number of successes (a watermelon being ripe and ready to eat), we can make use of the binomial probability density function:
+	$$b(x;n,p) = {}_{n}C_{x} \cdot p^{x} \cdot (1-p)^{n-x}$$
+	\textit{where}
+	$$x \equiv \text{the number of successful trials}$$
+	$$n \equiv \text{the total number of trials}$$
+	$$p \equiv \text{probability of success}$$
+	\begin{align*}
+		b(15;20,0.95) &= {}_{20}C_{15} \cdot 0.95^{15} \cdot (1-0.95)^{20-15} \\
+		&= \boxed{0.0022}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{b) at least 17 are ripe and ready to eat.}
+\begin{center}
+	Using the binomial probability density function, this can be expressed as:
+	$$\sum_{x=17}^{20} b(x;20,0.95)$$
+	We can also utilize the binomial cumulative distribution function. Using the calculator's built-in capabilities and a probability axiom for this, it can also be expressed like so:
+	$$1 - \text{binomcdf}(20,0.95,16)$$
+	This evaluates to:
+	$$1 - \text{binomcdf}(20,0.95,16)=\boxed{0.9841}$$
+\end{center}
+
+\textbf{16. A multiple choice quiz consists of 20 questions each with 5 choices for the answer, of which only one choice is the correct answer. A student who has not studied for the quiz plans to guess the answers for the quiz. Each question is worth 5 points. Find the probability that the student...}
+
+\qquad \textbf{a) scores exactly 45 points.}
+\begin{center}
+	This is yet another example of a binomial experiment. The total number of trials, (or in this case questions), is 20. Since these questions are worth 5 points a piece, that means that scoring 45 points would equate to correctly guessing 9 questions ($45/5$). If there are 5 choices for the answer, then the probability of correctly answering a question via guessing is $\frac{1}{5}$ or $0.20$. Now we can simply plug these value into the binomial probability mass function formula:
+	\begin{align*}
+		b(x;n,p) &= b(9;20,0.20) \\
+		&= {}_{20}C_{9} \cdot 0.20^{9} \cdot (1-0.20)^{20-9} \\
+		&= \boxed{0.0074}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{b) scores at least 40 points.}
+\begin{center}
+	Obtaining 40 points would mean the student correctly guessed 8 questions (40/5). Using the binomial probability density function and some of the values obtained in part a, this can be expressed as:
+	$$\sum_{x=8}^{20} b(x;20,0.20)$$
+	We can also utilize the binomial cumulative distribution function. Using the calculator's built-in capabilities and a probability axiom for this, it can also be expressed like so:
+	$$1 - \text{binomcdf}(20,0.20,7)$$
+	This evaluates to:
+	$$1 - \text{binomcdf}(20,0.20,7)=\boxed{0.0321}$$
+\end{center}
+
+\qquad \textbf{c) Find the expected number of correct answers and the expected score.}
+\begin{center}
+	Using the formula for the expected value in a binomial experiment:
+	\begin{align*}
+		\mu &= np \\
+		&= (20)(0.20) \\
+		&= \boxed{4}
+	\end{align*}
+	Since each question is worth 5 points, the student's expected score would be:
+	$$4 \times 5 = \boxed{20}$$
+\end{center}
+
+\textbf{18. An opinion poll about the local election found out that 55\% of the electorate favor the candidate A. If a random sample of 40 eligible voters are selected, what is the probability that...}
+
+\qquad \textbf{a) ...exactly 22 voters will favor candidate A?}
+\begin{center}
+	Defining a success to be favoring candidate A, we can simply plug these values directly into the binomial probability density function formula:
+	\begin{align*}
+		b(x;n,p) &= b(22;40,0.55) \\
+		&= {}_{40}C_{22} \cdot 0.55^{22} \cdot (1-0.55)^{40-22} \\
+		&= \boxed{0.1260}
+	\end{align*}
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{b) ...between 20 and 25 (both inclusive) voters will favor candidate A?}
+\begin{center}
+	Using summation notation and the strategies from above, this can be expressed as:
+	$$\sum_{x=20}^{25} b(x;40,0.55)$$
+	We can also utilize the binomial cumulative distribution function. Using the calculator's built-in capabilities and some simple subtraction, it can also be expressed like so:
+	$$\text{binomcdf}(40,0.55,25) - \text{binomcdf}(40,0.55,19)$$
+	This evaluates to:
+	$$\text{binomcdf}(40,0.55,25) - \text{binomcdf}(40,0.55,19) = \boxed{0.6544}$$
+\end{center}
+
+\qquad \textbf{c) ...the majority of voters in the sample will favor candidate A?}
+\begin{center}
+	We can interpret a majority to mean greater then half of the sample. Half of a group of 40 is 20. The next largest number is 21, making 21 or more people a majority of the group. We can express this probability as the compliment of the event that 20 or fewer voters favor candidate A. Using the calculator's built-in capabilities, this can be expressed as:
+	$$1 - \text{binomcdf}(40,0.55,20)$$
+	This evaluates to:
+	$$1 - \text{binomcdf}(40,0.55,20) = \boxed{0.6844}$$
+\end{center}
+
+\begin{center}
+	\underline{\textbf{Book Problem}}
+\end{center}
+
+\textbf{70. An instructor who taught two sections of engineering statistics last term, the first with 20 students and the second with 30, decided to assign a term project. After all projects had been turned in, the instructor randomly ordered them before grading. Consider the first 15 graded projects.}
+
+\pagebreak
+
+\qquad \textbf{a) What is the probability that exactly 10 of these are from the second section?}
+\begin{center}
+For this particular problem, we need to utilize the hypergeometric probability distribution. Although it has aspects of a binomial problem, we have data about both the sample and the population of the data. All we have to do is utilize the formula:
+	$$P(X=x) = \frac{{}_{M}C_{x} \cdot {}_{N-M}C_{n-x}}{{}_{N}C_{n}}$$
+	\textit{where}
+	$$x \equiv \text{the number of successes in the sample}$$
+	$$M \equiv \text{the number of successes in the population}$$
+	$$N \equiv \text{the number of elements in the population}$$
+	$$n \equiv \text{the number elements in the sample}$$
+	Plugging in 10 for $x$, 30 for $M$, 50 for $N$, and 15 for $n$, we get:
+	$$P(X=10) = \frac{{}_{30}C_{10} \cdot {}_{50-30}C_{15-10}}{{}_{50}C_{15}} = \boxed{0.2070}$$
+\end{center}
+
+\qquad \textbf{b) What is the probability that at least 10 of these are from the second section?}
+\begin{center}
+	In this part of the problem, we essentially need a cumulative distribution function. For the sake of saving space, I'm going to represent this as a summation only:
+	$$\sum_{x=10}^{15} \frac{{}_{30}C_{x} \cdot {}_{50-30}C_{15-x}}{{}_{50}C_{15}} = \boxed{0.3798}$$
+\end{center}
+
+\pagebreak
+
+\qquad \textbf{c) What is the probability that at least 10 of these are from the same section?}
+\begin{center}
+	Here, we need to consider two cases: the case that at least 10 are from the first section, or the case that at least 10 are from the second section. We already figured out the latter in part b, so now we just have to determine the former...:
+	$$\sum_{x=10}^{15} \frac{{}_{20}C_{x} \cdot {}_{50-20}C_{15-x}}{{}_{50}C_{15}} = 0.0140$$
+	...now we can add this with the probability obtained in part b to get:
+	$$0.3798 + 0.0140 = \boxed{0.3938}$$
+\end{center}
+
+\qquad \textbf{d) What are the mean value and standard deviation of the number among these 15 that are from the second section?}
+\begin{center}
+	\begin{align*}
+		\mu &= \frac{n \cdot M}{N} \\
+		&= \frac{(15)(30)}{(50)} \\
+		&= \boxed{9}
+	\end{align*}
+	\begin{align*}
+		\sigma &= \sqrt{\frac{n \cdot M \cdot (N-M) \cdot (N-n)}{N^{2} \cdot (N-1)}} \\
+		&= \sqrt{\frac{15 \cdot 30 \cdot (50-30) \cdot (50-15)}{50^{2} \cdot (50-1)}} \\
+		&= \boxed{1.6036}
+	\end{align*}
+\end{center}
+
+\qquad \textbf{e) What are the mean value and standard deviation of the number of projects not among these first 15 that are from the second section?}
+\begin{center}
+	The mean value of the projects not included in the sample of fifteen would simply be the remainder (so to speak) after we've calculated the mean value of the projects from the second section within the sample of fifteen. This would mean that $\mu = 30 - 9 = \boxed{21}$. As for the standard deviation, it would remain the same as it is in the sample: $\boxed{1.6036}$.
+\end{center}
+\end{document}
